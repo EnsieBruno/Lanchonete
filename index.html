@@ -18,11 +18,11 @@
         <h1>Bem Vindo ao Sistema Vendas</h1>
         <h2>DELICIAS DA JÔ</h2>
     </header>
-    <form action="https://sheetdb.io/api/v1/d8czoh06fiqtq" method="POST" name="Deliciasdajo">
+    <form  action="https://sheetdb.io/api/v1/d8czoh06fiqtq"  method="POST" name="Deliciasdajo">
         
         <label>
             <span>Data : </span>
-            <input type="date" name="data[data]" id="date">
+            <input type="date" name="data[data]" id="date" required>
         </label>
         <br>
         <label >
@@ -30,7 +30,7 @@
             <input  inputmode="numeric" name="data[valor]" type="text" id="valorInput" onkeyup="formatarMoeda(this)" placeholder="R$ ">
         </label>
         <br>
-        <button type="submit" onclick="sendIt() ; return false ">Enviar</button>
+        <button type="submit" onclick="sendIt() ">Enviar</button>
         <br>
         <button type="reset" >Nova Venda</button>
 
