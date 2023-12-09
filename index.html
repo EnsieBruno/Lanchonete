@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,500&display=swap" rel="stylesheet">
     <title>Delicias da Jô</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 
 </head>
 
@@ -19,26 +20,22 @@
     </header>
     <form action="https://sheetdb.io/api/v1/d8czoh06fiqtq" method="POST" name="Deliciasdajo">
         
-        <label for="">
-            <span>Data</span>
+        <label>
+            <span>Data : </span>
             <input type="date" name="data[data]" id="date">
         </label>
         <br>
         <label >
-            <span>Valor</span>
-            <input inputmode="numeric" type="text"  name="data[valor]" id="value" required placeholder="R$ 00,00">
+            <span>Venda:</span>
+            <input  inputmode="numeric" name="data[valor]" type="text" id="valorInput" onkeyup="formatarMoeda(this)" placeholder="R$ ">
         </label>
         <br>
+        <button type="submit" onclick="sendIt() ; return false ">Enviar</button>
         <br>
-        <button type="submit" onclick="sendIt()" >Enviar</button>
+        <button type="reset" >Nova Venda</button>
 
     </form>
 
-    <script>
-        function sendIt() {
-            alert("Venda Salva com sucesso!!")
-        }
-        </script>
 
 
 </body>
