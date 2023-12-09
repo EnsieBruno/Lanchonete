@@ -14,29 +14,33 @@
 <body>
 
     <header>
-        <h1>Bem Vindo</h1>
+        <h1>Bem Vindo ao Sistema Vendas</h1>
         <h2>DELICIAS DA JÔ</h2>
     </header>
-    <br>
-    <form action="">
+    <form action="https://sheetdb.io/api/v1/d8czoh06fiqtq" method="POST" name="Deliciasdajo">
         
         <label for="">
-            <span>Valor</span>
-            <input type="number" min="0.00" max="10000.00" step="0.01" name="value" id="value" required placeholder="R$ 00,00">
-        </label>
-        <br>
-        <label for="">
             <span>Data</span>
-            <input type="date" name="date" id="date">
+            <input type="date" name="data[data]" id="date">
+        </label>
+        <br>
+        <label >
+            <span>Valor</span>
+            <input type="text"  name="data[valor]" id="value" required placeholder="R$ 00,00">
         </label>
         <br>
         <br>
-        <button type="submit">Enviar</button>
+        <button type="submit" onclick="sendIt()" >Enviar</button>
 
     </form>
 
-    <script></script>
-    
+    <script>
+        function sendIt() {
+            alert("Venda Salva com sucesso!!")
+        }
+        </script>
+
+
 </body>
 
 </html>
